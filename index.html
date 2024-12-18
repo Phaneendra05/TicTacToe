@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <style>
+    /* Inline CSS for styling */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    #game-container {
+      width: 320px;
+      margin: 50px auto;
+      border: 3px solid #333;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: #ffffff;
+    }
+    #status {
+      background-color: #333;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    #board {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+      
+      
+      
+     
+    }
+    .cell {
+      width: 100px;
+      height: 100px;
+      font-size: 48px;
+      font-weight: bold;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      border: 2px solid #333;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .cell.winner {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .cell.tie {
+      background-color: #ff5722;
+      color: white;
+    }
+    .cell:hover {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div id="game-container">
+    <div id="status">Tic-Tac-Toe</div>
+    <div id="board"></div>
+  </div>
+  <script src="tictactoe.js"></script>
+</body>
+</html>
